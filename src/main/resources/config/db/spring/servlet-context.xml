@@ -20,7 +20,7 @@
 
 	<!-- 빈등록 + 자동주입 -->
 	<context:component-scan
-		base-package="kr.co.lifesolution.db" />
+		base-package="kr.co.lifesolution" />
 
 	<!-- 마이바티스 정보 처리 부분 -->
 	<context:property-placeholder
@@ -37,7 +37,7 @@
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="typeAliasesPackage"
-			value="kr.co.mlec.db.repository.vo" />
+			value="kr.co.lifesolution.repository.domain" />
 		<property name="mapperLocations"
 			value="classpath:config/db/sqlmap/*.xml" />
 		<property name="configLocation"
@@ -46,7 +46,7 @@
 	<!-- Mapper 인터페이스 정보를 스프링이 관리 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage"
-			value="kr.co.lifesolution.db.repository.mapper" />
+			value="kr.co.lifesolution.repository.mapper" />
 	</bean>
 
 	<!-- 트랜잭션 관리하기 -->
