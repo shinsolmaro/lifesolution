@@ -1,4 +1,4 @@
-package kr.co.lifesolutuon.common.db;
+package kr.co.lifesolution.common.db;
 
 import java.io.Reader;
 
