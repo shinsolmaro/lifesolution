@@ -3,6 +3,7 @@ package kr.co.lifesolution.staff.service;
 import java.util.Map;
 public interface StaffService {
 	/*
+
 	public List<Comment> commentList(int no);
 
 	public void write(Board board);
@@ -17,4 +18,5 @@ public interface StaffService {
 	
 	 */
 	public Map<String,Object> list() throws Exception;
+
 }
