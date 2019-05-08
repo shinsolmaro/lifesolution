@@ -1,4 +1,4 @@
-package kr.co.lifesolution.profit.controller;
+package kr.co.lifesolution.income.controller;
 
 import java.util.List;
 import java.util.Map;

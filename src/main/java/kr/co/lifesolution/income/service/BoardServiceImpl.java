@@ -1,4 +1,4 @@
-package kr.co.lifesolution.profit.service;
+package kr.co.lifesolution.income.service;
 
 import java.util.HashMap;
 import java.util.List;
