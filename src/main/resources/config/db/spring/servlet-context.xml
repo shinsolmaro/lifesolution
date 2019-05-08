@@ -48,6 +48,10 @@
 		<property name="basePackage"
 			value="kr.co.lifesolution.repository.mapper" />
 	</bean>
+	<mvc:view-resolvers>
+		<mvc:jsp prefix="/WEB-INF/jsp/" suffix=".jsp" />
+		<!-- 뷰페이지 찾을 때 저 부분들을 빼줘야 한다. -->
+	</mvc:view-resolvers>
 
 	<!-- 트랜잭션 관리하기 -->
 	<bean id="transactionManager"

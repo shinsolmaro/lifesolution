@@ -1,8 +1,7 @@
-package kr.co.lifesolution.member.service;
+package kr.co.lifesolution.staff.service;
 
-import java.util.List;
 import java.util.Map;
-public interface BoardService {
+public interface StaffService {
 	/*
 	public List<Comment> commentList(int no);
 
@@ -16,6 +15,6 @@ public interface BoardService {
 	
 	public Board detail(int no);
 	
-	public Map<String, Object> list(Page page);
-	*/
+	 */
+	public Map<String,Object> list() throws Exception;
 }

@@ -1,25 +1,23 @@
 package kr.co.lifesolution.staff.controller;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.UrlBasedViewResolver;
+
+import kr.co.lifesolution.staff.service.StaffService;
 
 // service 와 통신하고 service 가 mapper 와통신한 결과를 받는 역할.
 @Controller
-@RequestMapping("/board")
-public class BoardController {
-	/*
+@RequestMapping("/staff")
+public class StaffController {
 	// 멤버변수로 BoardService (sevice 역할을 해주는 인터페이스) 선언.
 	@Autowired
-	private BoardService service;
+	private StaffService service;
 
+	/*
 	@RequestMapping("/comment-list.json")
 	@ResponseBody
 	public List<Comment> commentList(int no) {
@@ -66,4 +64,13 @@ public class BoardController {
 		model.addAttribute("pageResult", result.get("pageResult"));
 	}
 	*/
+	@RequestMapping("/list.do")
+	public void list(Model model) throws Exception {
+		Map<String,Object> result = service.list();
+	    System.out.println("컨트롤러");
+		model.addAttribute("list", result.get("list"));
+		System.out.println(result.get("list"));
+		System.out.println("컨트롤러2");
+	}	
+
 }
